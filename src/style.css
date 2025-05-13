@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(18, 88, 118);
+    background-color: rgb(119, 180, 206);
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -36,7 +36,7 @@ form {
     font-size: 16px;
     border-radius: 50px;
     line-height: 20px;
-    color: blue;
+    color: rgb(12, 12, 95);
 }
 
 .submit-button {
@@ -57,4 +57,14 @@ form {
     line-height: 2;
     box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
     border-left: 5px solid rgb(14, 68, 108);
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+a {
+    color: rgb(14, 68, 108);
 }
