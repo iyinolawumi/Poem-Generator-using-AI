@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>AI Poem generator</title>
 </head>
@@ -12,30 +13,25 @@
         <h1>Welcome to the AI Poem Generator</h1>
     </header>
     <main>
-        <form>
-            <input type="text" placeholder="Enter the topic of the poem" autofocus required autocomplete="off" class="instructions" />
-            <input type="Submit" class="submit-button" />
+        <form id="poem-generator-form">
+          <input
+            type="text"
+            placeholder="Enter the topic of your favorite poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
         </form>
-        <div class="poem">
-            <strong>LOVE</strong>
-            <em>
-            <br /> A whisper soft, yet strong and true, 
-            <br /> A spark that paints the darkest hue,
-            <br /> It blooms in hearts without a sound.
-            <br /> silent joys and tears are found.
-            <br /> It bends but breaks not with the tide,
-            <br /> It walks with us, not far, but side.
-            <br /> No wealth can match its boundless grace—
-            <br /> A home, a light, a warm embrace.
-            </em>
-        </div>
-    </main>
-    <script src="src/index.js"></script>
+        <div class="poem" id="poem"></div>
+      </main>
     <footer>👋This project was coded by 
         <a href="https://github.com/iyinolawumi" target="_blank">Olaibi Olawumi praise</a> and it is 
         <a href="https://github.com/iyinolawumi/Poem-Generator-using-AI" target="_blank">open sourced on Github</a> 
         and is hosted on <a href="https://poem-generator-using-ai.vercel.app/" target="_blank">Vercel</a>
     </footer>
     </div>
+    <script src="src/index.js"></script>
 </body>
 </html>
