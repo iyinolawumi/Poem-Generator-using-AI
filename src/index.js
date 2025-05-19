@@ -1,27 +1,31 @@
-alert("Hello, Welcome to the AI Poem generator")
+alert("Hello, Welcome to the AI Poem generator");
 
-function displayPoem(respons) {
+function displayPoem(response) {
+  console.log("poem generated");
   new Typewriter("#poem", {
-    Strings: response.data.answer,
+    strings: response.data.answer, 
     autoStart: true,
     delay: 1,
     cursor: "",
   });
-
 }
 
 function generatePoem(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let apiKey = "027a3305d8coee741ce3fa3097t6b4ea";
-    let prompt = "";
-    let context = "";
-    let apiURL = 'https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}';
-  
-    console.log("generation poem");
-    axios.get(apiURL).then(displayPoem);
-    
-  }
-  
-  let poemFormElement = document.querySelector("#poem-generator-form");
-  poemFormElement.addEventListener("submit", generatePoem);
+  let instructionsInput = document.querySelector("#user-instructions");
+  let apiKey = "027a3305d8coee741ce3fa3097t6b4ea";
+  let context = "You are an AI assistant who loves to write short poems. Your mission is to write a 4-line poem in basic html and separate each line with <br />. Remove ```html in the text. Make sure to follow the user instructions below.";
+  let prompt = `User instructions: Generate a poem about ${instructionsInput.value}`;
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+ 
+  console.log("Generating poem");
+  console.log(`Prompt: ${prompt}`);
+  console.log(`Context: ${context}`);
+
+  axios.get(apiURL)
+    .then(displayPoem);
+}
+
+let poemFormElement = document.querySelector("#poem-generator-form");
+poemFormElement.addEventListener("submit", generatePoem);
