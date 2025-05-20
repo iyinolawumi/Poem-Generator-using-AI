@@ -1,7 +1,6 @@
 alert("Hello, Welcome to the AI Poem generator");
 
 function displayPoem(response) {
-  console.log("poem generated");
   new Typewriter("#poem", {
     strings: response.data.answer, 
     autoStart: true,
