@@ -21,10 +21,20 @@ header {
 }
 
 form {
+    display: flex;
+}
+
+.hint {
+    line-height: 1.5;
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.form-container {
     background-color: white;
     border-radius: 10px;
-    padding: 30px;
-    display: flex;
+    padding: 15px 20px;
     margin-bottom: 30px;
     box-shadow: 0px 20px 60px rgba(39, 33, 66, 0.03);
 }
@@ -67,4 +77,27 @@ footer {
 
 a {
     color: rgb(14, 68, 108);
+}
+
+.hidden {
+    display: none;
+}
+
+.poem strong {
+    color: rgb(14, 68, 108);
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
