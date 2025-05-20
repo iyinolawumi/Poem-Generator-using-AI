@@ -14,6 +14,7 @@
         <h1>Welcome to the AI Poem Generator</h1>
     </header>
     <main>
+      <div class="form-container">
         <form id="poem-generator-form">
           <input
             type="text"
@@ -24,9 +25,11 @@
             class="instructions"
             id="user-instructions"
           />
-          <input type="submit" value="Generate Poem" class="submit-button" />
+          <input type="submit"  class="submit-button" />
         </form>
-        <div class="poem" id="poem"></div>
+        <div class="hint">i.e Laughter, Hate, Pain</div>
+      </div>
+        <div class="poem hidden" id="poem"></div>
       </main>
     <footer>
       <p>👋This project was coded by 
